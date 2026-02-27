@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrolled Students</title>
+</head>
+<body>
+
+<h2>Students Enrolled in Your Courses</h2>
+
+{% if students %}
+    {% for student in students %}
+        <div>
+            <strong>Student:</strong> {{ student[0] }} |
+            <strong>Course:</strong> {{ student[1] }}
+        </div>
+        <hr>
+    {% endfor %}
+{% else %}
+    <p>No students enrolled yet.</p>
+{% endif %}
+
+<a href="/teacher">Back to Dashboard</a>
+<a href="/logout">Logout</a>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #dfdfe8;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #0b0b0b;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.welcome {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-icon {
+    cursor: pointer;
+    font-size: 18px;
+    color: #f7e205;
+}
+
+.notification-icon:hover {
+    color: rgb(236, 14, 14);
+}
+
+.logout-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 150px;
+    background-color: #448ad8;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 10px;
+    border-bottom: 2px solid rgba(10, 10, 10, 0.628);
+}
+
+.sidebar a:hover {
+    background-color: #000000;
+}
+/* MAIN */
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+/* CARDS */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+
+    transition: transform 0.3s ease, 
+                box-shadow 0.3s ease, 
+                background-color 0.3s ease;
+
+    will-change: transform;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    background-color: #f1f1f1;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='EDUVERSE.png') }}" alt="Logo">
+    </div>
+
+    <div class="welcome">
+        Welcome "{{ name }}"
+    </div>
+
+    <div class="nav-right">
+        <i class="fas fa-bell notification-icon"></i>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <a href="/profile">Profile</a>
+        <a href="#about">About</a>
+         <ul>
+            <li class="active"><i class="fas fa-th-large"></i> Dashboard</li>
+            <li><i class="fas fa-book"></i> My Courses</li>
+            <li><i class="fas fa-file"></i> Study Materials</li>
+            <li><i class="fas fa-check-square"></i> Assessments</li>
+            <li><i class="fas fa-award"></i> Certificates</li>
+        </ul>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <div class="card-container">
+
+            <div class="card">Available Courses</div>
+            <div class="card">Enrolled Courses</div>
+            <div class="card">My Videos</div>
+            <div class="card">Study Materials</div>
+            <div class="card">Assessment</div>
+            <div class="card">Certificates</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

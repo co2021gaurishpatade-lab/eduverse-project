@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+    </div>
+
+    <div class="welcome">
+        Welcome Admin "{{ name }}"
+    </div>
+
+    <div class="nav-right">
+        <i class="fas fa-bell notification-icon"></i>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <a href="/admin/profile">Profile</a>
+        <a href="#about">About</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <div class="card-container">
+
+            <div class="card" onclick="location.href='/view_students'">
+                View Students
+            </div>
+
+            <div class="card" onclick="location.href='/view_teachers'">
+                View Teachers
+            </div>
+
+            <div class="card" onclick="location.href='/grant_access'">
+                Grant Access
+            </div>
+
+            <div class="card" onclick="location.href='/view_database'">
+                View Database
+            </div>
+
+            <div class="card" onclick="location.href='/view_database'">
+                Upload notice
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
